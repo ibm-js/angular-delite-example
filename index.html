@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="style.css">
+		<title>List</title>
+		<script data-main="bower_components/" src="bower_components/requirejs/require.js"></script>
+
+		<script type="text/javascript">
+			require.config({
+				paths: {
+					angular: 'angular/angular.min',
+				},
+				shim: {
+					'angular' : {'exports' : 'angular'},
+				},
+				locale: "en-us",
+			});
+			require(["build/bower_components/dependencies.build.js", "app.js"]);
+		</script>
+	<body id="body-id">
+		<h1>A list of books <div class="subtitle"> you really want to read </div></h1>
+		<div ng-controller="MainCtrl">
+			<ng-list id="books" selection-mode="multiple" selected-items="selectedItems"></ng-list> 
+			<div class="actions">
+				<p ng-show="status !== 'adding'">
+					<button class="add" ng-click="status = 'adding'">add a book</button> 
+					<button class="remove" ng-class="{disabled: selectedItems.length === 0}" ng-disabled="selectedItems.length === 0" ng-click="removeSelected()">remove selected</button>&nbsp;
+					You've selected <strong> {{selectedItems.length}} item(s) </strong>
+				</p>
+				<p ng-show="status === 'adding'">
+					<input type="text" ng-model="newTitle" placeholder="Title">
+					<input type="text" ng-model="newISBN" placeholder="ISBN">
+					<button class="add" ng-click="add(newTitle, newISBN); status = null" ng-disabled="! newTitle || ! newISBN" >save</button>
+					<button ng-click="status = null">cancel</button>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
