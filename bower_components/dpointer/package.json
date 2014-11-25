@@ -1,0 +1,19 @@
+{
+	"name": "dpointer",
+	"version": "0.3.2",
+	"dependencies": {
+		"requirejs-dplugins": "0.2.x"
+	},
+	"devDependencies": {
+		"intern": "1.6.x",
+		"grunt": "~0.4.2",
+		"grunt-contrib-jshint": "~0.6.3"
+	},
+	"licenses": [
+		{
+			"type": "BSD",
+			"url": "https://github.com/ibm-js/dpointer/blob/master/LICENSE"
+		}
+	],
+	"bugs": "https://github.com/ibm-js/dpointer/issues"
+}

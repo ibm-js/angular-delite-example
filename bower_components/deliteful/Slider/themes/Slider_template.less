@@ -1,0 +1,134 @@
+// Template for Slider CSS, included from themes/*/Slider.less files
+
+.d-slider {
+	display: inline-block; // to mimic an INPUT
+	vertical-align: middle;
+	border-collapse: separate;
+	cursor: pointer;
+	padding: @d-slider-halo-size; // halo to make touches easier
+	.user-select(none); // prevent selection
+	.box-sizing(border-box);
+	.tap-highlight-color(rgba(255,255,255,0));
+	input {
+		display: none;
+	}
+	.d-slider-styles;
+}
+.d-slider-h {
+	width: @d-slider-size;
+	.d-slider-container {
+		width: @d-slider-bar-size;
+		min-width: (@d-slider-knob-size*4);
+		height: @d-slider-bar-thickness;
+	}
+	.d-slider-container > * {
+	        left: 0; // children are positioned with either top or bottom
+	}
+	.d-slider-progress-bar {
+		height: 100%;
+		top: 0;
+		float: none;
+	}
+	.d-slider-handle {
+		top: -(@d-slider-bar-border-width+@d-slider-knob-size/2-@d-slider-bar-thickness/2);
+		width: @d-slider-knob-thickness;
+		height: @d-slider-knob-size;
+	}
+}
+.d-slider-v {
+	height: @d-slider-size;
+	.d-slider-container {
+		height: @d-slider-bar-size;
+		min-height: (@d-slider-knob-size*4);
+		width: @d-slider-bar-thickness;
+	}
+	.d-slider-container > * {
+	        top: 0; // children are positioned with either left or right
+	}
+	.d-slider-progress-bar {
+		width: 100%;
+		left: 0;
+		display: block;
+	}
+	.d-slider-handle {
+		left: -(@d-slider-bar-border-width+@d-slider-knob-size/2-@d-slider-bar-thickness/2);
+		width: @d-slider-knob-size;
+		height: @d-slider-knob-thickness;
+	}
+}
+.d-slider-handle {
+	position: absolute;
+	display: inline-block;
+	.box-sizing(border-box);
+	border-width: @d-slider-knob-border-width;
+	border-style: @d-slider-knob-border-style;
+	border-color: @d-slider-knob-border-color;
+	border-radius: @d-slider-knob-border-radius;
+	padding: 0;
+	margin: 0;
+	background: gray;
+	background-clip: content-box;
+	.d-slider-handle-styles;
+}
+.d-slider-h-htl .d-slider-handle-max,
+.d-slider-h-lth .d-slider-handle-min {
+	left: -(@d-slider-knob-thickness/2);
+}
+.d-slider-h-htl .d-slider-handle-min,
+.d-slider-h-lth .d-slider-handle-max {
+	right: -(@d-slider-knob-thickness/2);
+}
+.d-slider-v-lth .d-slider-handle-max,
+.d-slider-v-htl .d-slider-handle-min {
+	bottom: -(@d-slider-knob-thickness/2);
+}
+.d-slider-v-lth .d-slider-handle-min,
+.d-slider-v-htl .d-slider-handle-max {
+	top: -(@d-slider-knob-thickness/2);
+}
+.d-slider-bar {
+	border-width: @d-slider-bar-border-width;
+	border-style: @d-slider-bar-border-style;
+	border-color: @d-slider-bar-border-color;
+	border-radius: @d-slider-bar-border-radius;
+	padding: 0;
+	margin: 0;
+	background: none;
+	background-clip: content-box;
+	.d-slider-bar-styles;
+}
+.d-slider-container { // content area of domNode
+	.box-sizing(border-box);
+	position: relative; // so children can use position:absolute
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	vertical-align: middle;
+	.d-slider-container-styles;
+}
+.d-slider-container > * {
+	position: absolute !important; // children use the RemainingBar's size
+}
+.d-slider-progress-bar {
+	.box-sizing(content-box);
+	border-width: 0; // this is a child of the RemainingBar
+	.d-slider-progress-bar-styles;
+}
+.d-slider-transition {
+	.transition-duration(400ms);
+}
+.dj_a11y .d-slider-handle::after {
+	content: "\025A3"; // make sure there's a visible handle
+	display: block;
+	font-family: monospace;
+	font-size: @d-slider-knob-thickness;
+}
+.dj_a11y .d-slider-h .d-slider-handle {
+	line-height: @d-slider-knob-size;
+}
+.dj_a11y .d-slider-v .d-slider-handle {
+	line-height: @d-slider-knob-thickness;
+}
+.dj_a11y .d-slider .d-slider-handle {
+	border-radius: 0;
+}

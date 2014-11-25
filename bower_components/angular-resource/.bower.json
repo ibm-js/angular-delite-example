@@ -1,0 +1,19 @@
+{
+  "name": "angular-resource",
+  "version": "1.2.28-build.565+sha.929dd15",
+  "main": "./angular-resource.js",
+  "ignore": [],
+  "dependencies": {
+    "angular": "1.2.28-build.565+sha.929dd15"
+  },
+  "homepage": "https://github.com/angular/bower-angular-resource",
+  "_release": "1.2.28-build.565+sha.929dd15",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.28-build.565+sha.929dd15",
+    "commit": "1590f6c47eda08d4c7fca03986df76f1e7246c92"
+  },
+  "_source": "git://github.com/angular/bower-angular-resource.git",
+  "_target": "~1.2.16",
+  "_originalSource": "angular-resource"
+}

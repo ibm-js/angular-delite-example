@@ -1,0 +1,28 @@
+{
+  "name": "dpointer",
+  "version": "0.3.2",
+  "dependencies": {
+    "requirejs-dplugins": "0.3.x"
+  },
+  "devDependencies": {
+    "requirejs": "2.1.x",
+    "requirejs-domready": "2.0.x"
+  },
+  "ignore": [
+    ".jshintrc",
+    ".gitattributes",
+    ".travis.yml",
+    "tests",
+    "CONTRIBUTING.md"
+  ],
+  "homepage": "https://github.com/ibm-js/dpointer",
+  "_release": "0.3.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.3.2",
+    "commit": "34c12f460f795b796ecbfd4739b3e46df32d0be9"
+  },
+  "_source": "git://github.com/ibm-js/dpointer.git",
+  "_target": "0.3.x",
+  "_originalSource": "dpointer"
+}

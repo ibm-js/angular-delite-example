@@ -1,0 +1,26 @@
+{
+  "name": "ecma402",
+  "version": "0.2.5",
+  "dependencies": {
+    "requirejs": "2.1.x",
+    "requirejs-text": "2.0.x",
+    "requirejs-dplugins": "0.3.x"
+  },
+  "ignore": [
+    ".jshintrc",
+    ".gitattributes",
+    ".travis.yml",
+    "tests",
+    "CONTRIBUTING.md"
+  ],
+  "homepage": "https://github.com/ibm-js/ecma402",
+  "_release": "0.2.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.5",
+    "commit": "bd0e741ad4d92d2e9880083d8fd9d2cdbe841258"
+  },
+  "_source": "git://github.com/ibm-js/ecma402.git",
+  "_target": "0.2.x",
+  "_originalSource": "ecma402"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "dstore",
+  "homepage": "https://github.com/SitePen/dstore",
+  "version": "0.2.0",
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "6c23218519a6fb91ebe2dc45931614bbbed1d0be"
+  },
+  "_source": "git://github.com/SitePen/dstore.git",
+  "_target": "0.2.0",
+  "_originalSource": "dstore"
+}

@@ -1,0 +1,28 @@
+{
+	"name": "deliteful",
+	"version": "0.4.0",
+	"dependencies": {
+		"dcl": "1.1.x",
+		"decor": "0.3.x",
+		"delite": "0.4.x",
+		"dojo": ">=1.9.1",
+		"dpointer": "0.3.x",
+		"ecma402": "0.2.x",
+		"requirejs": "2.1.x",
+		"requirejs-domready": "2.0.x",
+		"requirejs-dplugins": "0.3.x",
+		"dstore": "0.2.0"
+	},
+	"keywords": [
+		"web-components",
+		"delite",
+		"custom-elements"
+	],
+	"ignore": [
+		".jshintrc",
+		".gitattributes",
+		".travis.yml",
+		"tests",
+		"CONTRIBUTING.md"
+	]
+}

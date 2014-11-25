@@ -1,0 +1,32 @@
+{
+  "name": "angular-delite",
+  "dependencies": {
+    "dojo": ">=1.9.1",
+    "requirejs": "2.1.x",
+    "requirejs-text": ">=2.0.11",
+    "dcl": "1.1.x",
+    "angular": "~1.2.16",
+    "angular-resource": "~1.2.16"
+  },
+  "devDependencies": {
+    "platform": "Polymer/platform#~0.1.4",
+    "dstore": ">=0.1.0-dev"
+  },
+  "ignore": [
+    ".jshintrc",
+    ".gitattributes",
+    ".travis.yml",
+    "tests",
+    "CONTRIBUTING.md"
+  ],
+  "homepage": "https://github.com/tkrugg/angular-delite",
+  "_release": "2f7dd08199",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2f7dd08199ccdfcd5a7e523ba3f7e716cbe1acde"
+  },
+  "_source": "git@github.com:tkrugg/angular-delite.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:tkrugg/angular-delite.git"
+}
