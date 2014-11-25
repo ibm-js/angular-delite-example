@@ -1,1 +1,1 @@
-include: ["components/dojo/selector/_loader.js", "_loader.js"]
+include: ["components/dojo/selector/_loader.js", "_loader.js", "_base/"]
