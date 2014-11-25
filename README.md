@@ -6,7 +6,7 @@ This is an example that illustrates how to use [angular-delite](http://github.co
 1. Clone the project
 
 	```
-$ git clone git@github.com:tkrugg/angular-delite.git
+$ git clone git@github.com:tkrugg/angular-delite-example.git
 	```
 
 2. Install all dependencies
@@ -15,10 +15,10 @@ $ git clone git@github.com:tkrugg/angular-delite.git
 $ npm install 
 $ bower install
 	```
-3. Launch the build. This will create a `app.min.js` file in your root directory.
+3. Launch the build. This will create a `dependencies.build.js` under build/bower_components/.
 
 	```
-$ grunt minified
+$ grunt build
 	```
 
 ## Licensing
