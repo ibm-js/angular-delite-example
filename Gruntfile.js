@@ -93,6 +93,18 @@ module.exports = function (grunt) {
 		// Erase previous build.
 		clean: {
 			erase: [outdir]
+		},
+		jshint: {
+			src: [
+				"app.js",
+
+				// Note: skip this file since it gives a JSHint error about a character being silently deleted.
+				// It will have to be fixed by the translators.
+				"!nls/he/loading.js"
+			],
+			options: {
+				jshintrc: ".jshintrc"
+			}
 		}
 	});
 
@@ -119,6 +131,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-uglify");
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks("grunt-contrib-jshint");
 
 	// Default task.
 	grunt.registerTask("build", ["clean:erase", "amdbuild:amdloader", "amdreportjson:amdbuild"]);

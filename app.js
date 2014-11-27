@@ -4,31 +4,31 @@ require([
 	"deliteful/list/List",
 	"angular-delite/wrappers/widget",
 	"angular-delite/dstore/TrackableRest"
-	], function(angular, register, List, wrapper){
+], function (angular, register, List, wrapper) {
 		
 		angular.module("app", ["dstore.trackableRest"])
 			// creating a trackable REST store as a service
 			.factory("BookList", function (TrackableRest) {
-				return new TrackableRest({target: "http://nonews.mybluemix.net/book/"})
+				return new TrackableRest({target: "http://nonews.mybluemix.net/book/"});
 			})
 			// creating directive <ng-list ... ></ng-list>
-			.directive("ngList", ["BookList", function(BookList){
+			.directive("ngList", ["BookList", function (BookList) {
 				return wrapper(List, {selectedItems: "="}, {
-					store         : BookList, 
-					labelAttr     : "title", 
-					idAttr        : "id", 
-					righttextFunc : function(item, store, value){ return "ISBN " + item.isbn }
+					store         : BookList,
+					labelAttr     : "title",
+					idAttr        : "id",
+					righttextFunc : function (item) { return "ISBN " + item.isbn; }
 				});
 			}])
-			.controller("MainCtrl", ["$scope", function($scope){
+			.controller("MainCtrl", ["$scope", function ($scope) {
 				$scope.add = function (newTitle, newISBN) {
 					$scope.books.store.add({title: newTitle, isbn: newISBN});
 				};
-				$scope.removeSelected = function(){
-					$scope.selectedItems.forEach(function(item){
+				$scope.removeSelected = function () {
+					$scope.selectedItems.forEach(function (item) {
 						$scope.books.store.remove(item.id);
 					});
-				}
+				};
 			}]);
 
 		// boostrapping
