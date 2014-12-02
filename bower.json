@@ -1,33 +1,32 @@
 {
-  "name": "angular-delite-example",
-  "version": "angular-delite-example",
-  "homepage": "https://github.com/tkrugg/angular-delite-example",
-  "authors": [
-    "Youcef Mammar <youcef.mammar@fr.ibm.com>"
-  ],
-  "description": "An app that illustrates angular-delite",
-  "main": "index.html",
-  "keywords": [
-    "AngularJS",
-    "Delite"
-  ],
-  "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "requirejs": "latest",
-    "delite": "latest",
-    "deliteful": "latest",
-    "dstore": "latest",
-    "dojo": "latest",
-    "angular": "latest",
-    "requirejs-text": "latest",
-    "angular-delite": "git@github.com:tkrugg/angular-delite.git"
-  }
+	"name": "angular-delite-example",
+	"version": "angular-delite-example",
+	"homepage": "https://github.com/tkrugg/angular-delite-example",
+	"authors": [
+		"Youcef Mammar <youcef.mammar@fr.ibm.com>"
+		],
+	"description": "An app that illustrates angular-delite",
+	"main": "index.html",
+	"keywords": [
+		"AngularJS",
+		"Delite"
+		],
+	"license": "BSD",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+		],
+	"dependencies": {
+		"angular": "~1.2.16",
+		"delite": "0.5.x",
+		"deliteful": "0.5.x",
+		"angular-delite": "git@github.com:tkrugg/angular-delite.git",
+		"requirejs": "2.1.x",
+		"requirejs-domready": "2.0.x",
+		"requirejs-dplugins": "0.4.x"
+	}
 }
