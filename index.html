@@ -17,7 +17,9 @@
 				},
 				locale: "en-us",
 			});
-			require(["build/bower_components/dependencies.build.js", "app.js"]);
+			require(["build/bower_components/dependencies.build.js"], function () {
+				require(["app.js"]);
+			});
 		</script>
 	<body id="body-id">
 		<h1>A list of books <div class="subtitle"> you really want to read </div></h1>
