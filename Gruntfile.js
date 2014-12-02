@@ -23,7 +23,11 @@ module.exports = function (grunt) {
 			shim: {
 				'angular' : {'exports' : 'angular'},
 			},
-
+			map: {
+				jquery: {
+					"jquery/src/selector": "jquery/src/selector-native"
+				}
+			},
 			// Enable build of requirejs-text/text
 			inlineText: true,
 
@@ -54,7 +58,7 @@ module.exports = function (grunt) {
 				],
 				exclude: [
 					// Modules and layers listed here, and their dependencies, will NOT be in the layer.
-					"angular",
+					"angular"
 				],
 				excludeShallow: [
 					// Only the modules listed here (ie. NOT their dependencies)  will NOT be in the layer.
