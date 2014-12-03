@@ -41,17 +41,22 @@ module.exports = function (grunt) {
 			dir: tmpdir,
 
 			// List of plugins that the build should not try to resolve at build time.
-			runtimePlugins: ["delite/theme", "delite/css"],
+			runtimePlugins: [],
 
 			// List of layers to build.
 			layers: [{
 				name: "dependencies.build",
 				include: [
 					// Modules and layers listed here, and their dependencies, will be added to the layer.
+					// Modules and layers listed here, and their dependencies, will be added to the layer.
 					"delite/register",
 					"deliteful/list/List",
 					"angular-delite/wrappers/widget",
-					"angular-delite/dstore/TrackableRest"
+					"angular-delite/dstore/TrackableRest",
+					"dojo/request/xhr",
+					"dojo/selector/_loader",
+					"requirejs-text/text",
+					"deliteful/ProgressIndicator",
 				],
 				includeShallow: [
 					// Only the modules listed here (ie. NOT their dependencies) will be added to the layer.
@@ -90,6 +95,12 @@ module.exports = function (grunt) {
 				cwd: tmpdir,
 				src: "<%= " + outprop + ".plugins.rel %>",
 				dest: outdir,
+				dot: true
+			},
+			notIncludedModules: {
+				expand: false,
+				src: ["./bower_components/angular/**", "./style.css", "./app.js"],
+				dest:outdir,
 				dot: true
 			}
 		},
@@ -138,6 +149,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 
 	// Default task.
-	grunt.registerTask("build", ["clean:erase", "amdbuild:amdloader", "amdreportjson:amdbuild"]);
+	grunt.registerTask("build", ["clean:erase", "amdbuild:amdloader", "amdreportjson:amdbuild", "copy:notIncludedModules"]);
 };
 
