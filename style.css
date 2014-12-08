@@ -6,41 +6,49 @@ body {
 	font-family: "Droid Sans", sans-serif;
 	font-size: 16px;
 }
+
 h1 {
 	font-family: "Droid Serif", serif;
 	font-weight: 100;
 	font-size: 4em;
 	line-height: .7em;
 }
+
 h1 .subtitle {
 	font-size: .3em;
 	font-style: italic;
 }
+
 .d-list-item-label, .d-list-item-right-text {
 	font-weight: normal;
 	color: black;
 }
+
 [aria-selectable="true"] .d-list-item[aria-selected="true"]:before,
 [aria-multiselectable="true"] .d-list-item[aria-selected="true"]:before,
 [aria-selectable="true"] .d-list-item:before, 
 [aria-multiselectable="true"] .d-list-item:before {
 	content:"";
 }
+
 [aria-selectable="true"] .d-list-item, 
 [aria-multiselectable="true"] .d-list-item {
 	background-color:#fafafa;
 	margin: 3px 0;
 }
+
 .d-list-item:hover {
 	cursor: pointer;
 	background-color:#f0f0f0;
 
 }
+
 [aria-selectable="true"] .d-list-item[aria-selected="true"],
 [aria-multiselectable="true"] .d-list-item[aria-selected="true"] {
 	background-color:#e5e5e5;
 	color: #111;
 }
+
 input {
 	padding: .5em .6em;
 	display: inline-block;
@@ -103,10 +111,15 @@ button.add {
 .d-list-container {
 	height:auto;
 }
+
 button[disabled] {
 	opacity: .4;
 	cursor: not-allowed;
 	box-shadow: none;
 }
 
-
+[ng-cloak] { 
+	/* workaround for getting ng-cloak directive to work when angular is
+	 * loaded through AMD */
+	display:none !important;
+}
