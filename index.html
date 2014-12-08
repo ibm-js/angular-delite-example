@@ -27,7 +27,7 @@
 		<h1>A list of books <div class="subtitle"> you really want to read </div></h1>
 		<div ng-controller="MainCtrl">
 			<ng-list id="books" selection-mode="multiple" selected-items="selectedItems"></ng-list> 
-			<div class="actions">
+			<div class="actions" ng-cloak>
 				<p ng-show="status !== 'adding'">
 					<button class="add" ng-click="status = 'adding'">add a book</button> 
 					<button class="remove" ng-class="{disabled: selectedItems.length === 0}" ng-disabled="selectedItems.length === 0" ng-click="removeSelected()">remove selected</button>&nbsp;
