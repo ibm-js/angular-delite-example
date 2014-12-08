@@ -1,4 +1,5 @@
-This is an example that illustrates how to use [angular-delite](http://github.com/tkrugg/angular-delite) wrappers to bring any [deliteful](http://github.com/ibm-js/deliteful) widget or [dstore](http://github.com/sitepen/dstore) store into the context of an AngularJS application.
+This is an example that illustrates how to use [angular-delite](http://github.com/ibm-js/angular-delite) wrappers to bring any [deliteful](http://github.com/ibm-js/deliteful) widget or [dstore](http://github.com/sitepen/dstore) store into the context of an AngularJS application.
+It's connected to a REST backend hosted on [Bluemix](https://console.ng.bluemix.net/).
 
 
 ## Getting started 
@@ -6,7 +7,7 @@ This is an example that illustrates how to use [angular-delite](http://github.co
 1. Clone the project
 
 	```
-$ git clone git@github.com:tkrugg/angular-delite-example.git
+$ git clone git@github.com:ibm-js/angular-delite-example.git
 	```
 
 2. Install all dependencies

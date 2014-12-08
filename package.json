@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tkrugg/angular-delite-example.git"
+    "url": "git://github.com/ibm-js/angular-delite-example.git"
   },
   "keywords": [
     "angular",
@@ -28,7 +28,7 @@
   "author": "Youcef Mammar",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/tkrugg/angular-delite-example/issues"
+    "url": "https://github.com/ibm-js/angular-delite-example/issues"
   },
-  "homepage": "https://github.com/tkrugg/angular-delite-example"
+  "homepage": "https://github.com/ibm-js/angular-delite-example"
 }
